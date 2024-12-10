@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LAPADAMA</title>
+	<link rel="stylesheet" href="CSS/Style.css">
+	<script src="JS/Scripts.js"></script>
+<!-- Mapa de Contacto -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Fuente Lobster	 -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
+<!-- Fuente Pinyon Script -->
+	<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https: //fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+<!-- Fuente Protest Revolution -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+<!-- Fuente Sansita Swashed -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+<!--Icono font Chevron-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!--Precarga de imagenes-->
+	<link rel="preload" type="text/css" href="Media/Encabezado01.jpg">
+	<link rel="preload" type="text/css" href="Media/Encabezado02.jpg">
+	<link rel="preload" type="text/css" href="Media/Encabezado03.jpg">
+
+<!--Aos libreria de animación-->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+</head>
+<body>
+	<!-- modal de bienvenida-->
+	<div id="modalBienvenida">
+		<div id="modalBox">
+			<h1>Bienvenido a la web LAPADAMA</h1>
+			<button onclick="cerrarMBB()">Empieza</button>
+		</div>
+	</div>
+
+
+
+<header id="encabezado">
+	
+	<div class="fondosHero" id="fondoHero1"></div>
+	<div class="fondosHero" id="fondoHero2"></div>
+	<div class="fondosHero" id="fondoHero3"></div>
+
+	<nav id="navbar">
+
+		<a href="Index.html">
+			
+
+			<img src="Media/logo.png" alt="" id="logo">
+
+		</a>
+		<ul id="menu">
+			
+			<li class="elementoMenuInicio"><a href="#encabezado">Inicio</a></li>
+			<li class="elementoMenuInicio"><a href="#quienes">Quienes</a></li>	
+			<li class="elementoMenuInicio"><a href="#catalogo">Catálogo</a>
+
+				<ul id="submenu">
+					
+					<li class="elemSubmenu"><a href="#catalogo" onclick="marcaPestaña('CartaEvento','tabEvento')">Tipo de evento</a></li>
+					<li class="elemSubmenu"><a href="#catalogo" onclick="marcaPestaña('CartaMaterial', 'tabMaterial')">Material</a></li>
+					<li class="elemSubmenu"><a href="#catalogo" onclick="marcaPestaña('CartaPersonal', 'tabPersonal')">Personal</a></li>
+
+				</ul>
+
+			</li>	
+			<li class="elementoMenuInicio colocacionMenu"><a href="#galeria">Galería</a></li>	
+			<li class="elementoMenuInicio colocacionMenu"><a href="#contacto">Contacto</a></li>	
+			<li class="elementoMenuInicio colocacionMenu"><div id="reloj"></div></li>	
+		</ul>
+
+	</nav>
+
+
+	<h1 id="tituloEncabezado">LAPADAMA</h1>
+	<h2 id="textoEncabezado"> <p>Eventos que mueven
+	</p><p>tu vida</p> </h2>
+
+
+</header>
+
+<section id="quienes">
+	
+	<h2 class="tituloPagina" data-aos="fade-up">QUIENES</h2>
+	<div id="contetenedorQuienes">
+		<!-- EN EL EJERCICIO SOLO QUEREMOS UNA -->
+		<div class="columnaQuienes" data-aos="flip-right">
+			<!--<div id="video"></div>-->
+			<video src="Media/evento.mp4" alt="video eventos" id="video" controls muted autoplay></video>
+		</div>
+		<div class="columnaQuienes letraDescripcionQuienes" data-aos="flip-right">
+			<p>Toda una vida creando eventos 
+			para todo tipo de personas, con 
+			proximidad, trato personalizado
+			y transparencia, una gran experiencia.
+			</p>
+		</div>
+
+	</div>
+
+</section>
+
+<section id="catalogo">
+	
+	<h2 class="tituloPagina" data-aos="fade-up">CATÁLOGO</h2>
+
+	<div id="contenedorEtiquetaPestañas">
+		
+		<p id="tabEvento" class="clasificacionLetraCatalogo activarBoton" onclick="marcaPestaña('CartaEvento','tabEvento')">Tipo de evento</p>
+		<p id="tabMaterial" class="clasificacionLetraCatalogo" onclick="marcaPestaña('CartaMaterial', 'tabMaterial')">Material</p>
+		<p id="tabPersonal" class="clasificacionLetraCatalogo" onclick="marcaPestaña('CartaPersonal', 'tabPersonal')">Personal</p>
+	</div>
+
+	<div class="contenedorPestañas" id="CartaEvento"  data-aos="fade-up">
+		
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/inicia 1.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Bodas</p>
+		</div>
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/inicia 2.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Comuniones</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/inicia 3.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Fiesta de adultos</p>
+		</div>
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/inicia 4.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Fiesta de empresa</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/inicia 5.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Fiestas infantiles</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/inicia 6.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Grandes eventos</p>
+		</div>			
+	</div>
+
+	<div class="contenedorPestañas" id="CartaMaterial"  data-aos="fade-up" data-aos-offset="-800">
+		
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/estu 1.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Castillos hinchables</p>
+		</div>
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/estu 2.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Carpas</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/estu 3.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Decoración temática</p>
+		</div>
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/estu 4.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Juegos de mesa</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/estu 5.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Photo booth</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/estu 6.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Equipo de sonido y luces</p>
+		</div>			
+	</div>
+
+	<div class="contenedorPestañas" id="CartaPersonal"  data-aos="fade-up" data-aos-offset="-1500">
+		
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/profe 1.jpeg" alt="">
+				</div>
+				<p class="nombreEvento">Animadores</p>
+		</div>
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/profe 2.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Músicos</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/profe 3.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Dj</p>
+		</div>
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/profe 4.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Fotógrafo</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/profe 5.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Cantante</p>
+		</div>	
+		<div class="pieFotoEvento">	
+				<div class="imagenEvento">
+					<img src="Media/profe 6.jpg" alt="">
+				</div>
+				<p class="nombreEvento">Malabarista de fuegos</p>
+		</div>			
+	</div>
+
+</section>
+
+<section id="galeria">
+	
+	<h2 class="tituloPagina" data-aos="fade-up">GALERIA</h2>
+
+	<div id="contenedorGaleria">
+
+		<img class="imagenesGaleria" src="Media/gl1.jpg" alt="" data-aos="flip-left" data-aos-delay="100">
+		<img class="imagenesGaleria" src="Media/gl2.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+		<img class="imagenesGaleria" src="Media/gl3.jpeg" alt="" data-aos="flip-left" data-aos-delay="300">
+		<img class="imagenesGaleria" src="Media/gl4.jpg" alt="" data-aos="flip-left" data-aos-delay="400">
+		<img class="imagenesGaleria" src="Media/gl5.jpg" alt="" data-aos="flip-left" data-aos-delay="100">
+		<img class="imagenesGaleria" src="Media/gl6.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+		<img class="imagenesGaleria" src="Media/gl7.jpg" alt="" data-aos="flip-left" data-aos-delay="300">
+		<img class="imagenesGaleria" src="Media/gl8.jpg" alt="" data-aos="flip-left" data-aos-delay="400">
+		<img class="imagenesGaleria" src="Media/gl9.jpeg" alt="" data-aos="flip-left" data-aos-delay="100">
+		<img class="imagenesGaleria" src="Media/gl10.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+		<img class="imagenesGaleria" src="Media/gl11.jpg" alt="" data-aos="flip-left" data-aos-delay="300">
+		<img class="imagenesGaleria" src="Media/gl12.png" alt="" data-aos="flip-left" data-aos-delay="400">
+		<img class="imagenesGaleria" src="Media/gl13.jpg" alt="" data-aos="flip-left" data-aos-delay="100">
+		<img class="imagenesGaleria" src="Media/gl14.jpg" alt="" data-aos="flip-left" data-aos-delay="200">
+		<img class="imagenesGaleria" src="Media/gl15.jpg" alt="" data-aos="flip-left" data-aos-delay="300">
+		<img class="imagenesGaleria" src="Media/gl16.jpg" alt="" data-aos="flip-left" data-aos-delay="400">
+	</div>
+
+	<div id="modalLightBoxGal">
+		<div id="imageToShow">
+			
+
+
+		</div>
+		<button class="lbBoton lbbLeft" onclick="previaImgGal()"><i class="material-symbols-outlined">
+chevron_left
+</i></button>
+		<button class="lbBoton lbbRight" onclick="nextImgGal()"><i class="material-symbols-outlined">
+chevron_right
+</i></button>
+	</div>
+
+</section> 		
+<section id="contacto">
+	
+	<h2 class="tituloPagina" data-aos="fade-up">CONTACTO</h2>
+<!-- COPIAMOS LA PARTE DEL MAPA E INTRODUCIMOS -->
+	<div id="contenedorContacto">
+		<iframe  data-aos="fade-up" id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8592.296888548699!2d-3.695199450002235!3d40.41249045658557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289d4ba9e17f%3A0x4f1a5519094302c0!2sEducaci%C3%B3n%2C%20Retiro%2C%2028014%20Madrid!5e0!3m2!1ses!2ses!4v1709836117632!5m2!1ses!2ses" width="600" height="525" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+		<form  data-aos="fade-up" action="procesar_formulario.php" method="post" id="formulario">
+			
+			<p id="textoReservas">Reservas:</p>
+
+			<input id="formNombre" type="text" name="nombre" 
+			placeholder="Nombre y Apellidos" required>
+
+			<input id="formNumero" type="number" name="telefono" 
+			placeholder="Telefono" required>
+
+			<input id="formEmail" type="email" name="email" 
+			placeholder="Email" required>
+
+			<input id="formMensaje" type="text" name="mensaje" 
+			placeholder="Mensaje" required>
+
+			<input id="botonEnviar" type ="submit" value="Enviar">
+
+		</form>
+
+
+	</div>
+
+</section> 	
+
+	<footer id="pie">
+		<div id="ContenedorFot">
+			<img src="Media/twitter-removebg-preview.png" class="imagenRrss colocacionRrss"alt="">
+			<img src="Media/facebook-removebg-preview.png" class="imagenRrss colocacionRrss" 	alt="">
+			<img src="Media/ig-removebg-preview.png" class="imagenRrss colocacionRrss" alt="">
+		</div>
+	</footer>	
+
+<script>
+	
+	modalBienvenida();
+
+	//setInterval(heroSlideshow,3000); /**son milisegundos**/
+	setInterval(slideshowAnim,3000);
+	readyLightbox();
+
+
+</script>
+
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>
